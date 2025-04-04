@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.diego.budget_app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.diego.budget_app"
@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.fragment:fragment-ktx:1.8.6")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
