@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#424242</color>
     <color name="iconsHeader">#E3E3E3</color>
+    <color name="green_light">#E8F5E9</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="red_light">#FFEBEE</color>
+    <color name="red_dark">#C62828</color>
+    <color name="blue">#2196F3</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#616161</color>
 </resources>
