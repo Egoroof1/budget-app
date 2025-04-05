@@ -11,22 +11,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlin.math.absoluteValue
+import com.diego.budget_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     private var isUpDown: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val btnUpDown: ImageView = findViewById(R.id.iv_btnDown)
-        val header: FrameLayout = findViewById(R.id.header)
 
 
         if (savedInstanceState == null){
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
 
-        animHeader(btnUpDown, header)
+        animHeader(binding.ivBtnDown, binding.header)
 
     }
 

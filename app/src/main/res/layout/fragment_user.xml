@@ -15,7 +15,7 @@
             android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/gray_dark"
+            android:background="@color/material_dynamic_neutral80"
             app:layout_constraintTop_toTopOf="parent">
 
         </View>
@@ -137,7 +137,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/gray_dark"
+            android:background="@color/material_dynamic_neutral80"
             app:layout_constraintBottom_toBottomOf="parent">
 
         </View>
