@@ -2,139 +2,102 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/headerFragment"
+    android:id="@+id/katInomeFragment"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="120dp"
     tools:context=".UserFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <View
-            android:id="@+id/view2"
+
+        <!-- Доходы -->
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/material_dynamic_neutral80"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </View>
-
-        <!-- Общий бюджет -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="7dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Общий бюджет"
-                    android:textColor="@color/gray_dark"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tv_total_balance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="₽100.000.000"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Доходы -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
-            app:cardBackgroundColor="@color/green_light"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/materialCardView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:orientation="horizontal" >
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Доходы"
-                    android:textColor="@color/gray_dark"
-                    android:textSize="10sp" />
+                    android:layout_marginLeft="10dp"
+                    app:cardBackgroundColor="@color/green_light"
+                    app:cardCornerRadius="10dp">
 
-                <TextView
-                    android:id="@+id/tv_income"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="100.000.000"
-                    android:textColor="@color/green_dark"
-                    android:textSize="15sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:contentDescription="Salary"
+                            android:src="@drawable/ic_salary"
+                            app:tint="@color/green_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Зарплата"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100.000.000"
+                            android:textColor="@color/green_dark"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_margin="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_add_circle_24"
+                    app:tint="@color/green_dark" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_margin="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_add_circle_24"
+                    app:tint="@color/green_dark" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_margin="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_add_circle_24"
+                    app:tint="@color/green_dark" />
+
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Расходы -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp"
-            app:cardBackgroundColor="@color/red_light"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/materialCardView"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Расходы"
-                    android:textColor="@color/gray_dark"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_expense"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="100.000.000"
-                    android:textColor="@color/red_dark"
-                    android:textSize="15sp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </HorizontalScrollView>
 
         <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/material_dynamic_neutral80"
